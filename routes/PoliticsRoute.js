@@ -22,7 +22,10 @@ const politicsUrl = (pageNum) => {
 const renderPage = async (req, res) => {
   const pgNum = page.pageNum;
   const jsonNewsData = await fetchUtil.fetchApi(politicsUrl(pgNum));
-  const politicalNews = jsonNewsData.response.docs;
+  let politicalNews = null;
+  if (jsonNewsData.response) {
+    politicalNews = jsonNewsData.response.docs;
+  }
   res.render("PoliticalNews", { politicalNews, pgNum });
 };
 // set up politics news http get

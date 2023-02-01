@@ -44,12 +44,18 @@ const renderPage = async (req, res) => {
     pgNum
   );
   const searchData = await fetchUtil.fetchApi(url);
-  const advancedSearchResults = await searchData.response.docs;
+  let advancedSearchResults = null;
+  if (searchData.response) {
+    advancedSearchResults = await searchData.response.docs;
+  }
   res.render("AdvancedSearch", { advancedSearchResults, pgNum });
 };
 
 // get route for an advanced search
 router.get("/advancedSearch", (req, res) => {
+  if(saveReqQuery.body.sections !== req.query.sections){
+    page.pageNum = 0;
+  }
   saveReqQuery.body = req.query;
   renderPage(saveReqQuery.body, res);
 });

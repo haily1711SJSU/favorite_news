@@ -28,12 +28,18 @@ const renderPage = async (req, res) => {
   const pgNum = page.pageNum;
   const searchResultUrl = generateUrl(search_field, pgNum);
   const jsonSearchData = await fetchUtil.fetchApi(searchResultUrl);
-  const filteredNews = jsonSearchData.response.docs;
+  let filteredNews = null;
+  if (jsonSearchData.response) {
+    filteredNews = jsonSearchData.response.docs;
+  }
   res.render("SearchResults", { filteredNews, search_field, pgNum });
 };
 
 // set up sports http get
 router.get("/searchResults", (req, res) => {
+  if(search_field !== req.query.search_field){
+    page.pageNum = 0;
+  }
   search_field = req.query.search_field;
   renderPage(req, res);
 });

@@ -21,7 +21,10 @@ const scienceNewsUrl = (pageNum) => {
 const renderPage = async (req, res) => {
   const pgNum = page.pageNum;
   const jsonNewsData = await fetchUtil.fetchApi(scienceNewsUrl(pgNum));
-  const scienceNews = jsonNewsData.response.docs;
+  let scienceNews = null;
+  if (jsonNewsData.response) {
+    scienceNews = jsonNewsData.response.docs;
+  }
   res.render("ScienceNews", { scienceNews, pgNum });
 };
 

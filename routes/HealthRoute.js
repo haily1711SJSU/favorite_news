@@ -22,7 +22,10 @@ const healthNewsUrl = (pageNum) => {
 async function renderPage(req, res) {
   const pgNum = page.pageNum;
   const jsonNewsData = await fetchUtil.fetchApi(healthNewsUrl(pgNum));
-  const healthNews = jsonNewsData.response.docs;
+  let healthNews = null;
+  if (jsonNewsData.response) {
+    healthNews = jsonNewsData.response.docs;
+  }
   res.render("HealthNews", { healthNews, pgNum });
 }
 

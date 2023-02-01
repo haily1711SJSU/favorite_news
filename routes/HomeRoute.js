@@ -22,7 +22,10 @@ const topNewsUrl = (pageNum) => {
 const renderPage = async (req, res) => {
   const pgNum = page.pageNum;
   const jsonNewsData = await fetchUtil.fetchApi(topNewsUrl(pgNum));
-  const popularStories = jsonNewsData.response.docs;
+  let popularStories = null;
+  if (jsonNewsData.response) {
+    popularStories = jsonNewsData.response.docs;
+  }
   res.render("HomePage", { popularStories, pgNum });
 };
 

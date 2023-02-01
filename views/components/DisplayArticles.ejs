@@ -20,8 +20,12 @@
       </div>
     </div>
     <%} %> <% } else { %>
-    <div>No Articles Available</div>
-    <% } %>
-    <%- include("./NextPrevPage.ejs") %>
+    <div class="article-column">
+      <div class="article">
+        No Articles Available! This could be because you reached the maximum
+        number of api requests. Please wait 30 seconds and refresh the page.
+      </div>
+    </div>
+    <% } %> <% if (newsData) { %> <%- include("./NextPrevPage.ejs") %> <%} %>
   </div>
 </div>

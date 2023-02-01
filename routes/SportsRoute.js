@@ -23,7 +23,10 @@ const sportNewsUrl = (pageNum) => {
 const renderPage = async (req, res) => {
   const pgNum = page.pageNum;
   const jsonNewsData = await fetchUtil.fetchApi(sportNewsUrl(pgNum));
-  const sportNews = jsonNewsData.response.docs;
+  let sportNews = null;
+  if (jsonNewsData.response) {
+    sportNews = jsonNewsData.response.docs;
+  }
   res.render("SportNews", { sportNews, pgNum });
 };
 
