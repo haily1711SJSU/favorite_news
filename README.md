@@ -16,3 +16,6 @@
 
 3. Advanced Search Filter:
 >Filter search by section name, start date, end date and sort from oldest or newest.
+
+4. Light and Dark Mode:
+>Toggle between a light or dark theme
