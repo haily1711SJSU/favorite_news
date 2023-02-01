@@ -26,6 +26,6 @@ app.use(scienceRoute);
 app.use(politicsRoute);
 app.use(sportsRoute);
 // set server
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("server starting");
 });
