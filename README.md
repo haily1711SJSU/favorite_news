@@ -1,5 +1,8 @@
 # Favorite News Project
 
+## IMPORTANT
+> This project fetches data from the New York Times Developer API and users can only fetch 10 api urls in one minute. But no worries! Please wait for about 30 seconds and refresh the page.
+
 ## Link: 
 
 
