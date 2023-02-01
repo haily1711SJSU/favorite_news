@@ -9,4 +9,4 @@ Functions:
 
 2. Search By Keyword: Filter and search headlines by keywords. Each news page is sorted from newest to oldest
 
-3.Advanced Search Filter: Filter search by section name, start date, end date and sort from oldest or newest.
+3. Advanced Search Filter: Filter search by section name, start date, end date and sort from oldest or newest.
