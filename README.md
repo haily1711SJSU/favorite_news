@@ -6,7 +6,7 @@
 > This project fetches data from the New York Times Developer API and users can only fetch 10 api urls in one minute. But no worries! When no news articles are displayed, please wait 30 seconds and refresh the page.
 
 ## Description:
->This is a project that uses the New York Times Developer API to display and search daily news. Html(EJS)/CSS/Javascript are used for the frontend for users. Express and Node JS are used for the backend to fetch the api and create the server and routes.
+>This is a project that uses the New York Times Developer API to display and search daily news. Html(EJS)/CSS/Javascript are used on the frontend for users. Express and Node JS are used on the backend to fetch the api and create the server and routes.
 
 ## Functions
 
