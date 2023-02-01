@@ -1,7 +1,7 @@
 # Favorite News Project
 
 ## Link: 
-https://upset-erin-dolphin.cyclic.app
+
 
 ## Description:
 >This is a project that uses the New York Times Developer API to display and search daily news
