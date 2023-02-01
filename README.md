@@ -5,10 +5,8 @@ Description:
 
 Functions:
 
-1. Top Navbar
----- a.Navigate to popular, health, science, political and sport news. Each news page is sorted from newest to oldest
+1. Popular News Sections: Navigate to popular, health, science, political and sport news. Each news page is sorted from newest to oldest.
 
----- b.Filter and search headlines by keywords. Each news page is sorted from newest to oldest
+2. Search By Keyword: Filter and search headlines by keywords. Each news page is sorted from newest to oldest
 
-2.Advanced Search Filter
----- a.Filter search by section name, start date, end date and sort from oldest or newest.
+3.Advanced Search Filter: Filter search by section name, start date, end date and sort from oldest or newest.
