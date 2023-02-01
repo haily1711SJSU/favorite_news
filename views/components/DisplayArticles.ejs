@@ -1,0 +1,27 @@
+<div class="content">
+  <%- include("./Sidebar.ejs") %>
+  <div class="article-column">
+    <% if (newsData) { %> <% for(articles of newsData){ %>
+    <div class="article">
+      <div class="article-info">
+        <a href="<%= articles.web_url%>"><%= articles.headline.main%></a>
+        <p><%= articles.byline.original%></p>
+        <p><b>Date</b>: <%= articles.pub_date%></p>
+        <% if(articles.multimedia.length !== 0) { %>
+        <img
+          src="<%= 'https://static01.nyt.com/'+articles.multimedia[3].url%>"
+          alt="news img"
+        />
+        <% } else { %>
+        <img src="" alt="img not found from api" />
+        <% } %>
+        <p><%= articles.lead_paragraph%>...</p>
+        <a href="<%= articles.web_url%>">Source: <%= articles.source%></a>
+      </div>
+    </div>
+    <%} %> <% } else { %>
+    <div>No Articles Available</div>
+    <% } %>
+    <%- include("./NextPrevPage.ejs") %>
+  </div>
+</div>

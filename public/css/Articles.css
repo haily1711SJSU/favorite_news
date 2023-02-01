@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import "./Navbar.css";
+@import "./Sidebar.css";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+:root{
+  --text-color: black;
+  --bg-color: rgb(243, 243, 243);
+  --article-color: white;
+  --navbar-color: white;
+  --hover-color: rgb(206, 200, 200);
+}
+
+body > h2{
+  text-align: center;
+  background-color: var(--navbar-color);
+  color: var(--text-color);
+  border: 0.5px solid var(--hover-color);
+}
+
+.article-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+.content{
+  display: flex;
+}
+
+.article {
+  width: 100%;
+  background-color: var(--article-color);
+  text-align: center;
+  color: var(--text-color);
+  line-height: 1.75rem;
+  border: 0.5px solid var(--hover-color);
+  padding: 0.5rem;
+}
+
+.article:hover{
+  border: 0.5px solid var(--hover-color);
+}
+
+.article img {
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+.article a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.article p {
+  margin: 0.5rem;
+  font-size: 18px;
+}
+
+@media (max-width: 780px){
+  .article img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .content{
+    display: block;
+  }
+
+  .article{
+    width: 100%;
+  }
+}
+
+.next-prev-page{
+  background-color: var(--article-color);
+  width: 100%;
+  text-align: center;
+  border: 0.5px solid var(--hover-color);
+}
+
+#prevBtn, #nextBtn{
+  padding: 0.5rem 0.6rem;
+  margin: 0.2rem;
+  border: none;
+  border-radius: 4px;
+}
+
+#prevBtn:hover, #nextBtn:hover{
+  background-color: gray;
+}

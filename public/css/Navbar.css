@@ -1,0 +1,108 @@
+
+.navbar {
+  background-color: var(--navbar-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  font-size: 20px;
+  border: 0.5px solid var(--hover-color);
+}
+
+.navbar .links {
+  margin: 0.5rem 1rem;
+}
+
+.navbar .links a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+}
+
+.navbar .links a:hover {
+  border-radius: 9px;
+  background-color: var(--hover-color);
+}
+
+.search{
+  background-color: var(--navbar-color);
+  text-align: center;
+}
+
+.settings {
+  border: 0.5px solid var(--navbar-color);
+  border-radius: 10%;
+  background-color: black;
+  position: relative;
+}
+
+.settings img {
+  width: 30px;
+  height: auto;
+  object-fit: contain;
+}
+
+.settings-menu {
+  padding: 1rem 0.3rem;
+  background-color: var(--navbar-color);
+  display: none;
+  position: absolute;
+  right: 0;
+}
+
+.settings-menu button {
+  background-color: var(--navbar-color);
+  border: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  color: var(--text-color);
+}
+
+.settings-menu button:hover {
+  background-color: var(--hover-color);
+}
+
+form input{
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 30px;
+  padding: 0.4rem;
+}
+
+form input[type="text"]:focus {
+  outline: none;
+}
+
+.navbar form button {
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: black;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 780px){
+  .navbar{
+    display: block;
+    text-align: center;
+  }
+  .settings{
+    text-align: center;
+    width: 40px;
+    margin-top: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .navbar .links a{
+    padding: 0;
+    margin: 0.5rem;
+  }
+  .navbar .links a:hover {
+    border-radius: none;
+    background-color: var(--navbar-color);
+  }
+}

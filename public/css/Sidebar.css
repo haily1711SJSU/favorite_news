@@ -1,0 +1,28 @@
+.sidebar {
+    color: var(--text-color);
+    background-color: var(--navbar-color);
+    border: 0.5px solid var(--hover-color);
+}
+
+.sidebar-column{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 1rem;
+}
+
+label{
+    width: 120px;
+    display: inline-block;
+}
+
+.sidebar-column form table{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sidebar-column form button{
+    padding: 0.2rem 0.6rem;
+}
+
