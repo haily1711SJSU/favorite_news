@@ -1,4 +1,5 @@
 const express = require("express");
+const fetch = require('node-fetch');
 // hide NEWS_API_KEY
 require("dotenv").config();
 const apiKey = process.env.API_KEY;
