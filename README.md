@@ -1,8 +1,5 @@
 # Favorite News Project
 
-## Link: 
-http://Favoritenews-env-2.eba-qr2nzupn.us-west-2.elasticbeanstalk.com
-
 ## IMPORTANT
 > This project fetches data from the New York Times Developer API but users can only fetch 10 api urls in one minute. When the article limit is reached, please wait 30 seconds and refresh the page.
 
